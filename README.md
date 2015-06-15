@@ -10,9 +10,7 @@ As we all kown,A smallest Soc for users is:
 so I build a minsoc based on openriscv2,Here is the archtecture of it
 
 +------------------------------------------------------------------+
-
-+                      clkgen                                      +
-
+-                       clkgen                                     -                                      
 +------------------------------------------------------------------+
 
 
