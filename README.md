@@ -1,7 +1,7 @@
 # mkg-minsoc
 As we all kown,A smallest Soc for users is:
 
-1、can run simple codes(have memory) 
+##1、can run simple codes(have memory) 
 
 2、have debug interface for users to debug codes or download codes
 
