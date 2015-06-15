@@ -8,8 +8,11 @@ As we all kown,A smallest Soc for users is:
 3、can auto start form flash 
 
 so I build a minsoc based on openriscv2,Here is the archtecture of it
+
 +------------------------------------------------------------------+
--                       clkgen                                     +
+
++                      clkgen                                      +
+
 +------------------------------------------------------------------+
 
 
