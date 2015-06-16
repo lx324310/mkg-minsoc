@@ -22,7 +22,7 @@ In this tutorial I will build and introduce three architecture of soc based on o
 
 ![image](https://github.com/lx324310/mkg-minsoc/blob/master/doc/mkg-minsoc0.png)
 
-####mkg-minsoc0 top 
+As the image show,Mkg-minsoc0 top is consist with: 
 1、clkgen offer a system clock
 
 2、OR1200_top(contains openriscv2(CPU),cache,mmu,store buffer,wishbone interface unit(BIU) and so on,the purple parts are not prerequisite for OR1200_top)
@@ -33,13 +33,23 @@ In this tutorial I will build and introduce three architecture of soc based on o
 
 5、uart and gpio control(are not prerequisite for mkg-minsoc0)
 
-####mkg-minsoc bench top
+Mkg-minsoc bench top is consist of 
 
 1、mkg-minsoc0（design under test[DUT])
 
 2、or1200-monitor(used to display and save openriscv2 status such as gpsr value,time of inst excute,exception occur and so on)
 
-3、preload_ram
+3、preload_ram(used to download codes to ram)
 
-2、
+2、uart-decode,uart-send and gpio-monitor(used to sim uart model and gpio model)
+
+###mkg-minsoc1
+
+![image](https://github.com/lx324310/mkg-minsoc/blob/master/doc/mkg-minsoc1.png)
+
+###mkg-minsoc2
+
+![image](https://github.com/lx324310/mkg-minsoc/blob/master/doc/mkg-minsoc2.png)
+
+For this minsoc design you can also verified on FPGA board,
 
