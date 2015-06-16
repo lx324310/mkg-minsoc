@@ -22,12 +22,12 @@ In this tutorial I will build and introduce three architecture of soc based on o
 
 ![image](https://github.com/lx324310/mkg-minsoc/blob/master/doc/mkg-minsoc0.png)
 
-As the image show,Mkg-minsoc0 top is consist with: 
+Mkg-minsoc0 top is consist with: 
 1、clkgen offer a system clock
 
 2、OR1200_top(contains openriscv2(CPU),cache,mmu,store buffer,wishbone interface unit(BIU) and so on,the purple parts are not prerequisite for OR1200_top)
 
-3、whibone arbiter 
+3、whibone arbiter(simple arbiter with high 8 bit of wishbone address to decide which periperat to visit)  
 
 4、wb_ram(on_chip ram acts as memory)
 
@@ -41,11 +41,17 @@ Mkg-minsoc bench top is consist of
 
 3、preload_ram(used to download codes to ram)
 
-2、uart-decode,uart-send and gpio-monitor(used to sim uart model and gpio model)
+4、uart-decode,uart-send and gpio-monitor(used to sim uart model and gpio model)
 
 ###mkg-minsoc1
 
 ![image](https://github.com/lx324310/mkg-minsoc/blob/master/doc/mkg-minsoc1.png)
+
+
+Mkg-minsoc1 top design compared with mkg-minsoc0:
+
+1、a more complex wishbone arbiter(dbgbus and dbus arbiter by roll poll, through the 8 bit high address data to decide which periperat to visit)
+
 
 ###mkg-minsoc2
 
