@@ -17,7 +17,6 @@ But how to build a simple soc which can cover these functions. Here is a tutoria
 
 ##mkg-minsoc0
 Here is the archtecture of it
-![image](https://github.com/lx324310/mkg-minsoc/doc/mkg-minsoc0.png)
 
 
 
