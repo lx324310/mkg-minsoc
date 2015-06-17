@@ -1,5 +1,6 @@
 # mkg-minsoc
 mkg-minsoc is a soc design learning tutorial for Hardware engineer or student.
+
 Firstlys as we all kown,A soc for users is :
   
   1、can run codes and have simple periperat
@@ -23,6 +24,7 @@ In this tutorial I will build and introduce three architecture of soc based on o
 ![image](https://github.com/lx324310/mkg-minsoc/blob/master/doc/mkg-minsoc0.png)
 
 Mkg-minsoc0 top is consist with: 
+
 1、clkgen offer a system clock
 
 2、OR1200_top(contains openriscv2(CPU),cache,mmu,store buffer,wishbone interface unit(BIU) and so on,the purple parts are not prerequisite for OR1200_top)
@@ -70,5 +72,16 @@ Mkg-minsoc1 bench top compared with mkg-minsoc0:
 
 1、have a spi flash model to store program
 
+##Install and document introduce
+
+###soc_design_tool_install 
+Include 
+
+
+##Simulation with modelsim
+
+
+
+##Board verification
 For this minsoc design you can also verified on FPGA board,
 
