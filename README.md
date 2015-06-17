@@ -1,12 +1,12 @@
 # mkg-minsoc
 mkg-minsoc is a soc design learning tutorial for Hardware engineer or student.
-Firstlys we all kown,A soc for users is :
+Firstlys as we all kown,A soc for users is :
   
   1、can run codes and have simple periperat
 
   2、have debug interface for users to debug codes or download codes
 
-  3、codes can auto start 
+  3、self-staring
 
 In this tutorial I will build and introduce three architecture of soc based on openriscv2 from simple to complex which can compile these three function
 
@@ -14,7 +14,7 @@ In this tutorial I will build and introduce three architecture of soc based on o
 
   mkg-minsoc1:based on mkg-minsoc0 and added debug interface
 
-  mkg-minsoc2:based on mkg-minsoc1 and can codes auto start 
+  mkg-minsoc2:based on mkg-minsoc1 can selfstaring
 
 ##mkg-minsoc Archtecture introduce
 
@@ -52,10 +52,23 @@ Mkg-minsoc1 top design compared with mkg-minsoc0:
 
 1、a more complex wishbone arbiter(dbgbus and dbus arbiter by roll poll, through the 8 bit high address data to decide which periperat to visit)
 
+2、have a debug interface to debug CPU or visit other periperat
+
+Mkg-minsoc1 bench top compared with mkg-minsoc0:
+
+1、have a dbg_comm model to sim as hardware jtag tap for design to use the software to access the adbg interface
 
 ###mkg-minsoc2
 
 ![image](https://github.com/lx324310/mkg-minsoc/blob/master/doc/mkg-minsoc2.png)
+
+Mkg-minsoc2 top design compared with mkg-minsoc1:
+
+1、have a bootrom and spi control periperat(spi control used to access spi flash,bootrom used to store boot codes when pwer-on CPU fetch from bootrom,copy program from spi flash to memory(ram) until done,then cpu fetch from ram )
+
+Mkg-minsoc1 bench top compared with mkg-minsoc0:
+
+1、have a spi flash model to store program
 
 For this minsoc design you can also verified on FPGA board,
 
